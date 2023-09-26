@@ -1,0 +1,85 @@
+/* public/css/styles.css */
+
+.centered-section {
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    background-color: #f2f2f2; /* Couleur de fond gris clair */
+    padding: 20px; /* Espace autour des informations */
+}
+
+.centered-section img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Transforme la photo en forme ronde */
+    object-fit: cover; /* Ajuste la photo pour remplir le cercle */
+    margin-top: 30px; /* Ajoute une marge supérieure de 20px */
+}
+
+
+.centered-section h1 {
+font-family: Arial, Helvetica, sans-serif;
+font-size:25px;
+font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
+
+}  
+
+
+.centered-section h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    text-transform: uppercase; /* Convertit le texte en majuscules */
+    
+}  
+
+
+.centered-section .presentation-text {
+    width: 500px; /* Largeur de 500px */
+    border: 1px solid #000; /* Filet noir de 1px */
+    border-radius: 10px; /* Bords arrondis de 10px */
+    padding: 10px; /* Marge intérieure de 10px */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+/* ... Section des 4 grands points ... */
+
+.circle-section {
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les cercles */
+    margin: 20px 0; /* Marge autour de la section */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #007bff; /* Couleur de fond */
+    border-radius: 50%; /* Forme du cercle */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Animation au survol */
+    /* Ajoutez un filet noir léger autour du cercle */
+    border: 2px solid #000; /* Épaisseur et couleur du filet */
+    /* Ajoutez une petite ombre */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Décalage horizontal, vertical, flou, couleur */
+}
+}
+
+.circle a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte */
+}
+
+.circle:hover {
+    background-color: #0056b3; /* Couleur de fond au survol */
+    cursor: pointer;
+}
+
+
