@@ -13,17 +13,19 @@
 .centered-section img {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* Transforme la photo en forme ronde */
-    object-fit: cover; /* Ajuste la photo pour remplir le cercle */
-    margin-top: 30px; /* Ajoute une marge supérieure de 20px */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
+    border: 5px solid rgb(51, 204, 204); /* Ajoute un filet avec la couleur RVB */
 }
+
 
 
 .centered-section h1 {
 font-family: Arial, Helvetica, sans-serif;
 font-size:25px;
 font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
-
 }  
 
 
@@ -31,13 +33,19 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     font-family: Arial, Helvetica, sans-serif;
     font-size:30px;
     text-transform: uppercase; /* Convertit le texte en majuscules */
+    color: rgb(0, 0, 0);
     
 }  
+
+.special {
+    color: rgb(51, 204, 204); /* Couleur spéciale (RVB 51, 204, 204) pour "Web" et "Web Mobile" */
+}
+
 
 
 .centered-section .presentation-text {
     width: 500px; /* Largeur de 500px */
-    border: 1px solid #000; /* Filet noir de 1px */
+    border: 2px solid rgb(51, 204, 204); 
     border-radius: 10px; /* Bords arrondis de 10px */
     padding: 10px; /* Marge intérieure de 10px */
     font-family: Arial, Helvetica, sans-serif;
@@ -46,40 +54,52 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 
 
-
-/* ... Section des 4 grands points ... */
+/* ... SECTION des 4 ICONES ... */
 
 .circle-section {
     display: flex;
-    justify-content: space-around; /* Espacement égal entre les cercles */
-    margin: 20px 0; /* Marge autour de la section */
+    justify-content: space-around;
+    margin: 20px 0;
 }
 
 .circle {
-    width: 150px;
-    height: 150px;
-    background-color: #007bff; /* Couleur de fond */
-    border-radius: 50%; /* Forme du cercle */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease; /* Animation au survol */
-    /* Ajoutez un filet noir léger autour du cercle */
-    border: 2px solid #000; /* Épaisseur et couleur du filet */
-    /* Ajoutez une petite ombre */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Décalage horizontal, vertical, flou, couleur */
-}
+    text-align: center; /* Centrage du texte */
+    position: relative; /* Position relative pour les éléments enfants */
 }
 
 .circle a {
     text-decoration: none;
-    color: #fff; /* Couleur du texte */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #060000;
+    position: relative; /* Position relative pour les liens */
+    z-index: 2; /* Empilez le lien au-dessus du fond */
 }
 
-.circle:hover {
-    background-color: #0056b3; /* Couleur de fond au survol */
-    cursor: pointer;
+.circle-title {
+    bottom: 0; /* Alignez-le en bas du cercle */
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Couleur de fond transparente par défaut */
+    border-radius: 10px; /* Bords arrondis */
+    padding: 8px 10px; /* Espace intérieur */
+    opacity: 1; /* Afficher le titre dès le chargement de la page */
+    transition: background-color 0.3s ease; /* Animation de couleur de fond */
+    z-index: 1; /* Empilez le fond en dessous du lien */
+    
 }
 
+.circle:hover .circle-title {
+    background-color: #d5d7d7; /* Couleur de fond grise au survol */
+    opacity: 1; /* Afficher le fond au survol */
+}
 
+/* Styles pour l'icône animé */
+.circle-icon {
+    width: 150px;
+    height: 150px;
+}

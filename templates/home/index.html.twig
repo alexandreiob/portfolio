@@ -6,29 +6,51 @@
 <div class="centered-section">
         <img src="{{ asset('images/profil.jpg') }}" alt="Ma Photo">
         <h1>Alexandre Guillard</h1>
-        <h2>Développeur Web & Web Mobile</h2>
+        <h2>Développeur
+        <span class="special">Web</span> & <span class="special">Web Mobile</span>
+</h2>
+
         <p class="presentation-text">Après 15 années dans le graphisme, j’ai effectué une reconversion professionelle en tant que Développeur Web, je me suis spécialisé dans le back et plus particulièrement dans le framework Symfony.</p>
 </div>
 
-<!-- Section des 4 grands points -->
+
+<!-- Section des 4 ICONES -->
+
 <div class="circle-section">
+    <!-- Expérience -->
     <div class="circle">
-        <img src="{{ asset('images/rondorange.png') }}" alt="Expérience">
-        <a href="#experience">Expérience</a>
+        <img src="{{ asset('images/experience.gif') }}" alt="Expérience" class="circle-icon">
+        <div class="circle-title">
+            <a href="#experience">Expérience</a>
+        </div>
     </div>
+
+    <!-- Compétences -->
     <div class="circle">
-        <!-- Ajoutez un picto ou une photo ici -->
-        <a href="#competences">Compétences</a>
+        <img src="{{ asset('images/competences.gif') }}" alt="Compétences" class="circle-icon">
+        <div class="circle-title">
+            <a href="#competences">Compétences</a>
+        </div>
     </div>
+
+    <!-- Formation -->
     <div class="circle">
-        <!-- Ajoutez un picto ou une photo ici -->
-        <a href="#formation">Formation</a>
+        <img src="{{ asset('images/formation.gif') }}" alt="Formation" class="circle-icon">
+        <div class="circle-title">
+            <a href="#formation">Formation</a>
+        </div>
     </div>
+
+    <!-- Centres d'intérêts -->
     <div class="circle">
-        <!-- Ajoutez un picto ou une photo ici -->
-        <a href="#interets">Centres d'intérêts</a>
+        <img src="{{ asset('images/centresdinterets.gif') }}" alt="Centres d'intérêts" class="circle-icon">
+        <div class="circle-title">
+            <a href="#interets">Centres d'intérêts</a>
+        </div>
     </div>
 </div>
+
+
 
 
 {% endblock %}
