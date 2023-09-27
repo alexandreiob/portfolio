@@ -90,6 +90,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     opacity: 1; /* Afficher le titre dès le chargement de la page */
     transition: background-color 0.3s ease; /* Animation de couleur de fond */
     z-index: 1; /* Empilez le fond en dessous du lien */
+    margin-bottom: 10px;
     
 }
 
@@ -102,4 +103,74 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 .circle-icon {
     width: 150px;
     height: 150px;
+}
+
+
+
+/* ... SECTION BLOCS PROJETS ... */
+
+.projects-container {
+    background-color: #f2f2f2; /* Fond gris clair pour l'ensemble de la page */
+    height: 500px;
+}
+
+
+.projects-section {
+    background-color: #f2f2f2; /* Fond gris clair */
+    display: flex;
+    justify-content: space-between; /* Espacement uniforme entre les projets */
+    margin: 0 auto; /* Marge gauche et droite automatique pour centrer */
+    max-width: 1700px; /* Largeur maximale de la section */
+    
+}
+
+
+
+.project {
+    width: 500px;
+    height: 325px;
+    background-color: #fff; /* Fond blanc pour les rectangles */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
+    border: 5px solid rgb(51, 204, 204); /* Ajoute un filet avec la couleur RVB */
+    border-radius: 10px; /* Bords arrondis de 10px */
+}
+
+
+/* ... SECTION BLOCS INFOS DES PROJETS ... */
+
+
+.project-info {
+    width: 500px;
+    display: flex;
+    flex-direction: column; /* Affiche les informations en colonne */
+    align-items: flex-start; /* Alignement à gauche */
+}
+
+
+.infos-container {
+    display: flex;
+    justify-content: space-between; /* Espacement uniforme entre les projets */
+    margin: 0 auto; /* Marge gauche et droite automatique pour centrer */
+    max-width: 1700px; /* Largeur maximale de la section */
+}
+
+
+.project-info h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+    font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
+    margin-bottom: 0;
+    }  
+
+.small-icon {
+    width: 50px; /* Ajustez la largeur souhaitée */
+    height: auto; /* Garde la proportion d'origine */
+    display: flex;
+    align-items: flex-start; /* Alignement à gauche */
+    }
+
+
+    /* Styles CSS pour afficher les icônes en ligne (horizontalement) */
+.project-icons {
+    display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
 }
