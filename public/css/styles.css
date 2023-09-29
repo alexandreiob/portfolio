@@ -111,7 +111,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 .projects-container {
     background-color: #f2f2f2; /* Fond gris clair pour l'ensemble de la page */
-    height: 500px;
+    height: 600px;
 }
 
 
@@ -162,11 +162,18 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     margin-bottom: 0;
     }  
 
+.project-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+        }  
+
 .small-icon {
     width: 50px; /* Ajustez la largeur souhaitée */
     height: auto; /* Garde la proportion d'origine */
     display: flex;
     align-items: flex-start; /* Alignement à gauche */
+    margin-right: 5px;
+    margin-top: 10px;
     }
 
 
