@@ -111,7 +111,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 .projects-container {
     background-color: #f2f2f2;
-    height: 600px;
+    height: 630px;
 }
 
 .projects-section {
@@ -217,3 +217,68 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 .project-icons {
     display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
 }
+
+
+
+/* ... SECTION CONTACTS ... */
+
+
+.centered-section-contact {
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+    background-color: #ffffff;
+    margin-top: 30px;
+
+}
+
+.centered-section-contact h2 {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: x-large;
+   text-transform: uppercase;
+}
+
+
+
+
+
+
+.contact-container {
+    display: flex;
+    justify-content:center; /* Espacement égal entre les éléments */
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.contact-info {
+    
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contact-info p {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(51, 204, 204);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.contact-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(51, 204, 204);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
