@@ -111,7 +111,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 .projects-container {
     background-color: #f2f2f2;
-    height: 630px;
+    height: 550px;
 }
 
 .projects-section {
@@ -142,32 +142,38 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     object-fit: contain
 }
 
+.project a {
+    text-decoration: none; /* Désactive le soulignement */
+}
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
     color: #fff;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement les éléments de l'overlay */
+    justify-content: center; /* Centrer verticalement les éléments de l'overlay */
     opacity: 0;
     transition: opacity 0.3s ease; /* Animation de transition */
 }
+
 
 .project:hover .overlay {
     opacity: 1;
 }
 
 .overlay p {
-   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   letter-spacing: 5px;
-   color: rgb(226, 227, 227);
-   font-size: x-large;
-   text-transform: uppercase;
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-bottom: 10px; /* Ajout d'une marge en bas */
 }
 
 
@@ -179,7 +185,8 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     width: 500px;
     display: flex;
     flex-direction: column; /* Affiche les informations en colonne */
-    align-items: flex-start; /* Alignement à gauche */
+    align-items: center; /* Centrer horizontalement les informations */
+    text-align: center; /* Centrer horizontalement le texte */
 }
 
 
@@ -203,20 +210,35 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     text-align: justify;
         }  
 
-.small-icon {
-    width: 50px; /* Ajustez la largeur souhaitée */
-    height: auto; /* Garde la proportion d'origine */
-    display: flex;
-    align-items: flex-start; /* Alignement à gauche */
-    margin-right: 5px;
-    margin-top: 10px;
-    }
 
 
     /* Styles CSS pour afficher les icônes en ligne (horizontalement) */
-.project-icons {
-    display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
-}
+    .project-icons {
+        display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
+        align-items: center; /* Centrer verticalement les icônes */
+        margin-top: 10px;
+        position: relative; /* Position relative pour positionner la ligne blanche */
+    }
+    
+
+    .project-icons img {
+        width: 50px; /* Ajustez la largeur souhaitée */
+        height: auto; /* Garde la proportion d'origine */
+        margin-right: 5px;
+    }
+
+ 
+
+    .divider {
+        position: absolute;
+        bottom: 30%; /* Alignez la ligne blanche en bas de la ligne d'icônes */
+        left: 50%; /* Alignez-la au centre horizontalement */
+        transform: translateX(-50%);
+        width: 90%; /* Ajustez la largeur de la ligne blanche */
+        height: 60px; /* Ajustez l'épaisseur de la ligne blanche */
+        background-color: #fff; /* Couleur de la ligne blanche */
+        border-radius: 30px; /* Bords arrondis pour correspondre au fond de l'overlay */
+    }
 
 
 
