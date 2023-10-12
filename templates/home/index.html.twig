@@ -17,35 +17,44 @@
 <!-- Section des 4 ICONES -->
 
 <div class="circle-section">
-    <!-- Expérience -->
+       <!-- Expérience -->
     <div class="circle">
-        <img src="{{ asset('images/experience.gif') }}" alt="Expérience" class="circle-icon">
+        <a href="{{ path('app_experience') }}">
+            <img src="{{ asset('images/experience.gif') }}" alt="Expérience" class="circle-icon">
+        </a>
         <div class="circle-title">
-            <a href="#experience">Expérience</a>
+            <a href="{{ path('app_experience') }}">Expérience</a>
         </div>
     </div>
 
     <!-- Compétences -->
     <div class="circle">
-        <img src="{{ asset('images/competences.gif') }}" alt="Compétences" class="circle-icon">
+        <a href="{{ path('app_competence') }}">
+            <img src="{{ asset('images/competences.gif') }}" alt="Compétences" class="circle-icon">
+        </a>
         <div class="circle-title">
-            <a href="#competences">Compétences</a>
+            <a href="{{ path('app_competence') }}">Compétences</a>
         </div>
     </div>
 
-    <!-- Formation -->
+   <!-- Formation -->
     <div class="circle">
-        <img src="{{ asset('images/formation.gif') }}" alt="Formation" class="circle-icon">
+        <a href="{{ path('app_formation') }}">
+            <img src="{{ asset('images/formation.gif') }}" alt="Formation" class="circle-icon">
+        </a>
         <div class="circle-title">
-            <a href="#formation">Formation</a>
+            <a href="{{ path('app_formation') }}">Formation</a>
         </div>
     </div>
 
-    <!-- Centres d'intérêts -->
+
+   <!-- Centres d'intérêts -->
     <div class="circle">
-        <img src="{{ asset('images/centresdinterets.gif') }}" alt="Centres d'intérêts" class="circle-icon">
+        <a href="{{ path('app_centresdinterets') }}">
+            <img src="{{ asset('images/centresdinterets.gif') }}" alt="Centres d'intérêts" class="circle-icon">
+        </a>
         <div class="circle-title">
-            <a href="#interets">Centres d'intérêts</a>
+            <a href="{{ path('app_centresdinterets') }}">Centres d'intérêts</a>
         </div>
     </div>
 </div>
