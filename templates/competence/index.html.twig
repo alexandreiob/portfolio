@@ -1,20 +1,43 @@
+{# templates/experience/index.html.twig #}
+
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CompetenceController!{% endblock %}
+{% block title %}Compétences{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div  class="fondpage">   
+    <div class="experience-content">
+            <h1>Compétences</h1>
+            <h2>Intégration Web & Web mobile</h2>
+                <div class="secondparagraphe">
+                    <p>HTML et CSS selon les bonnes pratiques d'accessibilité (W3C, RGAA)</p>
+                </div>
+                <h2>Développement Frontend</h2>
+                <div class="secondparagraphe">
+                    <p>Twig, Bootstrap, Javascript</p>
+                </div>
+                <h2>Développement Backend</h2>
+                <div class="secondparagraphe">
+                    <p>Symfony, Laravel, PHP (Orienté objet, MVC, API Rest, MySQL)</p>
+                </div>
+                 <h2>Gestion de projet Web</h2>
+                <div class="secondparagraphe">
+                    <p>Rédaction d’un cahier des charges, suivi technique, wireframes et user stories, versionning avec Git/GitHub</p>
+                </div>
+                 <h2>Graphisme</h2>
+                <div class="secondparagraphe">
+                    <p>Direction Artistique, Photoshop, Illustrator, Indesign, Animate C, Acrobat Pro</p>
+                </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/aguillard/portfolio/src/Controller/CompetenceController.php'|file_link(0) }}">src/Controller/CompetenceController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/aguillard/portfolio/templates/competence/index.html.twig'|file_link(0) }}">templates/competence/index.html.twig</a></code></li>
-    </ul>
-</div>
+            
+    </div>
+</div>    
 {% endblock %}
+
+
+
+
+
+
+
