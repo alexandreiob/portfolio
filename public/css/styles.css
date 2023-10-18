@@ -1,5 +1,10 @@
 /* public/css/styles.css */
 
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
 
 .centered-section {
     text-align: center; /* Centre le texte horizontalement */
@@ -308,12 +313,12 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 /* public/css/experience.css */
 
 .fondpage {
-    background-color: #f2f2f2; /* Couleur de fond gris clair */ 
-    width:100%;
-    height:100%;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-
+    align-items: center; /* Ajoutez cela pour centrer verticalement */
 }
 
 .experience-content {
@@ -325,6 +330,8 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     border-radius: 10px; /* Bords arrondis de 10px */
     padding: 50px; /* Marge intérieure de 10px */
     background-color: #ffffff;
+    position: relative;
+
 }
 
 .experience-content h1 {
@@ -377,6 +384,13 @@ body {
 
 
 
+/* BOUTON HOME */
 
-
-
+.boutonhome {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 20px; /* Vous pouvez ajuster cette valeur pour positionner verticalement */
+    right: 20px; /* Pour aligner à droite */
+    
+}
