@@ -5,9 +5,30 @@ controllers:
     type: attribute
 
 
-    # routes.yaml
+
 toggle_dark_mode:
     path: '/toggle-dark-mode'
     controller: 'App\Controller\HomeController::toggleDarkMode'
+    
     methods: ['POST']
 
+
+toggle_dark_mode_formation:
+    path: '/toggle-dark-mode'
+    controller: 'App\Controller\FormationController::toggleDarkMode'
+    methods: ['POST']
+
+
+app_toggle_dark_mode_experience:
+    path: '/toggle-dark-mode'
+    controller: 'App\Controller\ExperienceController::toggleDarkMode'
+    methods: ['POST']
+
+
+
+app_toggle_dark_mode_competence:
+    path: '/toggle-dark-mode'
+    controller: 'App\Controller\CompetenceController::toggleDarkMode'
+    methods: ['POST']
+
+    

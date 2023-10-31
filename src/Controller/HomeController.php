@@ -12,20 +12,15 @@ class HomeController extends AbstractController
 {
     #[Route('/', name: 'app_home')]
     public function index(Request $request): Response
-{
-    // Récupère la valeur actuelle du mode sombre depuis la session
-    $isDarkMode = $request->getSession()->get('isDarkMode', false);
+    {
+        // Récupère la valeur actuelle du mode sombre depuis la session
+        $isDarkMode = $request->getSession()->get('isDarkMode', false);
 
-    // Récupère le chemin de la route toggleDarkMode
-    $toggleDarkModeRoute = $this->generateUrl('toggle_dark_mode');
-
-    return $this->render('home/index.html.twig', [
-        'controller_name' => 'HomeController',
-        'isDarkMode' => $isDarkMode,
-        'toggleDarkModeRoute' => $toggleDarkModeRoute,
-    ]);
-}
-
+        return $this->render('home/index.html.twig', [
+            'controller_name' => 'HomeController',
+            'isDarkMode' => $isDarkMode,
+        ]);
+    }
 
     public function toggleDarkMode(Request $request): JsonResponse
     {
