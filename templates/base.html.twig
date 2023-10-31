@@ -79,9 +79,10 @@
 
 <div id="toggle-dark-mode-container">
     <button id="toggle-dark-mode">
-        <span id="dark-icon"><img src="images/lune.png" alt="Lune"></span>
-        <!-- Ajout de la div background-container derrière l'icône soleil -->
-        <span id="light-icon" style="display: none;"><div class="background-container"></div><img src="images/soleil.png" alt="Soleil"></span>
+        <span id="light-icon" style="display: none;"><div class="background-container"></div><img src="images/soleil.png" alt="Soleil" title="Activer le mode clair"></span>
+        <span id="dark-icon"><img src="images/lune.png" alt="Lune" title="Activer le mode sombre"></span>
+       
+        
     </button>
 </div>
 
@@ -104,11 +105,11 @@
 
         // Change l'icône en fonction du mode sombre
         if (isDarkMode) {
-            darkIcon.style.display = 'inline-block';
-            lightIcon.style.display = 'none';
-        } else {
             darkIcon.style.display = 'none';
             lightIcon.style.display = 'inline-block';
+        } else {
+            darkIcon.style.display = 'inline-block';
+            lightIcon.style.display = 'none';
         }
     }
 
@@ -121,20 +122,22 @@
     if (isDarkModeInitially) {
         document.body.classList.add('dark-mode');
         const lightIcon = document.getElementById('light-icon');
+        const darkIcon = document.getElementById('dark-icon');
         const backgroundContainer = document.querySelector('.background-container');
         
-        lightIcon.style.display = 'none';
+        darkIcon.style.display = 'none';
+        lightIcon.style.display = 'inline-block';
         backgroundContainer.style.display = isDarkModeInitially ? 'block' : 'none';
     } else {
         const container = document.getElementById('toggle-dark-mode-container');
         container.classList.add('light-mode');
     }
 
-    // Applique la taille de 70px aux icônes
+    // Applique la taille de 90px aux icônes
     const iconElements = document.querySelectorAll('#dark-icon img, #light-icon img');
     iconElements.forEach(function(icon) {
-        icon.style.width = '70px';
-        icon.style.height = '70px';
+        icon.style.width = '90px';
+        icon.style.height = '90px';
     });
 </script>
 
