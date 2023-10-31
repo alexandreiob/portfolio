@@ -6,7 +6,10 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         <link rel="icon" href="{{ asset('images/lettre-a.png') }}" type="image/x-icon">
-        
+
+       
+
+
         {% block stylesheets %}
         {% endblock %}
 
@@ -14,6 +17,131 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+ <style>
+    #toggle-dark-mode-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: -40px;
+    }
+
+    #toggle-dark-mode {
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Ajout de la classe background-container pour ajouter le fond derrière l'icône soleil */
+    .background-container {
+        background-color: #f2f2f2; /* Couleur de fond de votre page en mode clair */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        z-index: -1; /* Assure que le fond est derrière l'icône */
+       
+    }
+
+    /* Styles pour le mode clair */
+    
+
+    #toggle-dark-mode-container.light-mode {
+        background-color: #f2f2f2; /* Couleur de fond pour le conteneur du bouton en mode clair */
+    }
+
+    #dark-icon.light-mode,
+    #light-icon.light-mode {
+        background-color: #f2f2f2; /* Couleur de fond pour la ligne de l'icône en mode clair */
+    }
+
+    .background-container.light-mode {
+        background-color: #f2f2f2; /* Fond gris en mode clair */
+    }
+
+    /* Styles pour le mode sombre */
+    body.dark-mode {
+        background-color: #000000; /* Couleur de fond de votre page en mode sombre */
+    }
+
+    #toggle-dark-mode-container.dark-mode {
+        background-color: #000000; /* Couleur de fond pour le conteneur du bouton en mode sombre */
+    }
+
+    #dark-icon.dark-mode,
+    #light-icon.dark-mode {
+        background-color: #000000; /* Couleur de fond pour la ligne de l'icône en mode sombre */
+    }
+
+    .background-container.dark-mode {
+        background-color: #111; /* Fond noir en mode sombre */
+    }
+</style>
+
+<div id="toggle-dark-mode-container">
+    <button id="toggle-dark-mode">
+        <span id="dark-icon"><img src="images/lune.png" alt="Lune"></span>
+        <!-- Ajout de la div background-container derrière l'icône soleil -->
+        <span id="light-icon" style="display: none;"><div class="background-container"></div><img src="images/soleil.png" alt="Soleil"></span>
+    </button>
+</div>
+
+{% block body %}{% endblock %}
+
+<script>
+    // Fonction pour basculer le mode sombre
+    function toggleDarkMode() {
+        const isDarkMode = document.body.classList.toggle('dark-mode');
+        const darkIcon = document.getElementById('dark-icon');
+        const lightIcon = document.getElementById('light-icon');
+        const backgroundContainer = document.querySelector('.background-container');
+
+        // Change la couleur de fond en fonction du mode sombre
+        const container = document.getElementById('toggle-dark-mode-container');
+        container.classList.toggle('dark-mode', isDarkMode);
+        darkIcon.classList.toggle('dark-mode', isDarkMode);
+        lightIcon.classList.toggle('dark-mode', isDarkMode);
+        backgroundContainer.classList.toggle('dark-mode', isDarkMode);
+
+        // Change l'icône en fonction du mode sombre
+        if (isDarkMode) {
+            darkIcon.style.display = 'inline-block';
+            lightIcon.style.display = 'none';
+        } else {
+            darkIcon.style.display = 'none';
+            lightIcon.style.display = 'inline-block';
+        }
+    }
+
+    // Ajoute un écouteur d'événements au bouton
+    const toggleButton = document.getElementById('toggle-dark-mode');
+    toggleButton.addEventListener('click', toggleDarkMode);
+
+    // Applique initialement le mode sombre si c'est activé
+    const isDarkModeInitially = {{ isDarkMode ? 'true' : 'false' }};
+    if (isDarkModeInitially) {
+        document.body.classList.add('dark-mode');
+        const lightIcon = document.getElementById('light-icon');
+        const backgroundContainer = document.querySelector('.background-container');
+        
+        lightIcon.style.display = 'none';
+        backgroundContainer.style.display = isDarkModeInitially ? 'block' : 'none';
+    } else {
+        const container = document.getElementById('toggle-dark-mode-container');
+        container.classList.add('light-mode');
+    }
+
+    // Applique la taille de 70px aux icônes
+    const iconElements = document.querySelectorAll('#dark-icon img, #light-icon img');
+    iconElements.forEach(function(icon) {
+        icon.style.width = '70px';
+        icon.style.height = '70px';
+    });
+</script>
+
+
+
+
+
+
     </body>
 </html>

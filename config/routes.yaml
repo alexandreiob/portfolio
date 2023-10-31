@@ -3,3 +3,11 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+    # routes.yaml
+toggle_dark_mode:
+    path: '/toggle-dark-mode'
+    controller: 'App\Controller\HomeController::toggleDarkMode'
+    methods: ['POST']
+

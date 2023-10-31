@@ -5,6 +5,39 @@ body, html {
     margin: 0;
 }
 
+.dark-mode {
+    background-color: #000000; /* Fond noir en mode sombre */
+    color: #ffffff; /* Texte blanc en mode sombre */
+    .centered-section {
+        background-color: #000000;
+    }    
+    .centered-section-contact {
+        background-color: #000000;
+    }    
+    .projects-container {
+        background-color: #000000;
+    }    
+    .projects-section {
+        background-color: #000000;
+    }   
+    .contact-container {
+        background-color: #000000;
+    } 
+    .centered-section h2 {
+        color: #ffffff;
+    }   
+    .circle {
+        filter: invert(100%);
+    }  
+    .circle-title {
+        background-color: rgb(218, 16, 16);
+    }  
+    .circle:hover .circle-title {
+        background-color: #575858; /* Couleur de fond grise au survol */
+       
+    }
+}
+
 
 .centered-section {
     text-align: center; /* Centre le texte horizontalement */
