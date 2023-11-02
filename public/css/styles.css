@@ -36,8 +36,18 @@ body, html {
         background-color: #575858; /* Couleur de fond grise au survol */
        
     }
-}
 
+    .fondpage {
+        background-color: #000000;
+    }
+    
+    .experience-content {
+        background-color: #000000;    
+    }  
+    .boutonhome {
+        filter: invert(100%);  
+    }
+}
 
 .centered-section {
     text-align: center; /* Centre le texte horizontalement */
