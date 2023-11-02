@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Cookie;
 
 class HomeController extends AbstractController
 {
@@ -29,6 +30,14 @@ class HomeController extends AbstractController
         // Stocke la préférence dans la session
         $request->getSession()->set('isDarkMode', $isDarkMode);
 
-        return new JsonResponse(['success' => true]);
+        // Créer le cookie avec la date d'expiration
+        $cookie = new Cookie('darkMode', $isDarkMode ? '1' : '0', time() + 2592000); // 30 jours en secondes
+
+        // Ajoute le cookie à la réponse
+        $response = new JsonResponse(['success' => true]);
+        $response->headers->setCookie($cookie);
+
+        return $response;
     }
 }
+

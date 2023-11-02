@@ -26,21 +26,19 @@ body, html {
     .centered-section h2 {
         color: #ffffff;
     }   
-    .circle {
-        filter: invert(100%);
-    }  
+   
+
+    
+      
     .circle-title {
         background-color: rgb(218, 16, 16);
     }  
     .circle:hover .circle-title {
         background-color: #575858; /* Couleur de fond grise au survol */
-       
     }
-
     .fondpage {
         background-color: #000000;
     }
-    
     .experience-content {
         background-color: #000000;    
     }  
@@ -413,17 +411,10 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     margin-right: 5px; /* Ajoute un espace entre la puce et le texte */
 }
 
-body {
-    min-height: 100vh; /* 100% de la hauteur de la vue (viewport) */
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
 
-*, *::before, *::after {
-    box-sizing: inherit;
-}
+
+
 
 
 
@@ -437,3 +428,9 @@ body {
     right: 20px; /* Pour aligner à droite */
     
 }
+
+
+
+
+
+

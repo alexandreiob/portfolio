@@ -16,9 +16,18 @@
         {% block javascripts %}
         {% endblock %}
     </head>
-    <body>
+<style>
+    body {
+        margin-top: 0px; /* Ajoute une marge négative pour compenser la barre en haut */
+    }
+</style>
 
- <style>
+
+<body class="{{ isDarkMode ? 'dark-mode' : '' }}">
+    <div class="background-container"></div>
+    <!-- Le reste de ton code HTML ici -->
+
+    <style>
     #toggle-dark-mode-container {
         display: flex;
         justify-content: center;
@@ -30,32 +39,18 @@
         border: none;
     }
 
-    /* Ajout de la classe background-container pour ajouter le fond derrière l'icône soleil */
-    .background-container {
-        background-color: #f2f2f2; /* Couleur de fond de votre page en mode clair */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 55px;
-        z-index: -1; /* Assure que le fond est derrière l'icône */
-       
-    }
-
     /* Styles pour le mode clair */
-    
 
+    
+   
     #toggle-dark-mode-container.light-mode {
         background-color: #f2f2f2; /* Couleur de fond pour le conteneur du bouton en mode clair */
+        height : 100px;
     }
 
     #dark-icon.light-mode,
     #light-icon.light-mode {
         background-color: #f2f2f2; /* Couleur de fond pour la ligne de l'icône en mode clair */
-    }
-
-    .background-container.light-mode {
-        background-color: #f2f2f2; /* Fond gris en mode clair */
     }
 
     /* Styles pour le mode sombre */
@@ -71,20 +66,17 @@
     #light-icon.dark-mode {
         background-color: #000000; /* Couleur de fond pour la ligne de l'icône en mode sombre */
     }
-
-    .background-container.dark-mode {
-        background-color: #111; /* Fond noir en mode sombre */
-    }
 </style>
 
 <div id="toggle-dark-mode-container">
     <button id="toggle-dark-mode">
-        <span id="light-icon" style="display: none;"><div class="background-container"></div><img src="images/soleil.png" alt="Soleil" title="Activer le mode clair"></span>
+        <span id="light-icon"><img src="images/soleil.png" alt="Soleil" title="Activer le mode clair"></span>
         <span id="dark-icon"><img src="images/lune.png" alt="Lune" title="Activer le mode sombre"></span>
-       
-        
     </button>
 </div>
+
+</body>
+
 
 {% block body %}{% endblock %}
 
@@ -111,6 +103,13 @@
             darkIcon.style.display = 'inline-block';
             lightIcon.style.display = 'none';
         }
+
+        // Enregistre l'état du mode sombre dans un cookie
+        const cookieValue = isDarkMode ? "1" : "0";
+        document.cookie = "darkMode=" + encodeURIComponent(cookieValue);
+
+        // Débogage : Affiche la valeur du cookie dans la console
+        console.log("darkMode cookie value:", cookieValue);
     }
 
     // Ajoute un écouteur d'événements au bouton
@@ -118,17 +117,19 @@
     toggleButton.addEventListener('click', toggleDarkMode);
 
     // Applique initialement le mode sombre si c'est activé
-    const isDarkModeInitially = {{ isDarkMode ? 'true' : 'false' }};
+    const isDarkModeInitially = {{ isDarkMode ? 'true' : 'false' }} || (getCookie('darkMode') === '1') || false;
+    const body = document.body;
+    const lightIcon = document.getElementById('light-icon');
+    const darkIcon = document.getElementById('dark-icon');
+    const backgroundContainer = document.querySelector('.background-container');
+
     if (isDarkModeInitially) {
-        document.body.classList.add('dark-mode');
-        const lightIcon = document.getElementById('light-icon');
-        const darkIcon = document.getElementById('dark-icon');
-        const backgroundContainer = document.querySelector('.background-container');
-        
+        body.classList.add('dark-mode');
         darkIcon.style.display = 'none';
         lightIcon.style.display = 'inline-block';
-        backgroundContainer.style.display = isDarkModeInitially ? 'block' : 'none';
+        backgroundContainer.style.display = 'block';
     } else {
+        body.classList.remove('dark-mode');
         const container = document.getElementById('toggle-dark-mode-container');
         container.classList.add('light-mode');
     }
@@ -139,7 +140,14 @@
         icon.style.width = '90px';
         icon.style.height = '90px';
     });
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
 </script>
+
 
 
 

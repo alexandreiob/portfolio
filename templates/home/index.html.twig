@@ -2,6 +2,9 @@
 
 {% block title %}Portfolio Alexandre Iob Guillard{% endblock %}
 
+
+
+
 {% block body %}
 
 
@@ -17,12 +20,15 @@
 
 
 <!-- Section des 4 ICONES -->
-
 <div class="circle-section">
-       <!-- Expérience -->
+    <!-- Expérience -->
     <div class="circle">
         <a href="{{ path('app_experience') }}">
-            <img src="{{ asset('images/experience.gif') }}" alt="Expérience" class="circle-icon">
+            {% if isDarkMode %}
+                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Expérience sombre" class="circle-icon">
+            {% else %}
+                <img src="{{ asset('images/experience_clair.gif') }}?mode=clair" alt="Expérience clair" class="circle-icon">
+            {% endif %}
         </a>
         <div class="circle-title">
             <a href="{{ path('app_experience') }}">Expérience</a>
@@ -32,34 +38,47 @@
     <!-- Compétences -->
     <div class="circle">
         <a href="{{ path('app_competence') }}">
-            <img src="{{ asset('images/competences.gif') }}" alt="Compétences" class="circle-icon">
+            {% if isDarkMode %}
+                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Compétences sombre" class="circle-icon">
+            {% else %}
+                <img src="{{ asset('images/competences_clair.gif') }}?mode=clair" alt="Compétences clair" class="circle-icon">
+            {% endif %}
         </a>
         <div class="circle-title">
             <a href="{{ path('app_competence') }}">Compétences</a>
         </div>
     </div>
 
-   <!-- Formation -->
+    <!-- Formation -->
     <div class="circle">
         <a href="{{ path('app_formation') }}">
-            <img src="{{ asset('images/formation.gif') }}" alt="Formation" class="circle-icon">
+            {% if isDarkMode %}
+                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Formation sombre" class="circle-icon">
+            {% else %}
+                <img src="{{ asset('images/formation_clair.gif') }}?mode=clair"" alt="Formation clair" class="circle-icon">
+            {% endif %}
         </a>
         <div class="circle-title">
             <a href="{{ path('app_formation') }}">Formation</a>
         </div>
     </div>
 
-
-   <!-- Centres d'intérêts -->
+    <!-- Centres d'intérêts -->
     <div class="circle">
         <a href="{{ path('app_centresdinterets') }}">
-            <img src="{{ asset('images/centresdinterets.gif') }}" alt="Centres d'intérêts" class="circle-icon">
+            {% if isDarkMode %}
+                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Centres d'intérêts sombre" class="circle-icon">
+            {% else %}
+                <img src="{{ asset('images/centresdinterets_clair.gif') }}?mode=clair"" alt="Centres d'intérêts clair" class="circle-icon">
+            {% endif %}
         </a>
         <div class="circle-title">
             <a href="{{ path('app_centresdinterets') }}">Centres d'intérêts</a>
         </div>
     </div>
 </div>
+
+
 
 
 <!-- Section PROJETS -->
