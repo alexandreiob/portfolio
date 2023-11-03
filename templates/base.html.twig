@@ -68,12 +68,7 @@
     }
 </style>
 
-<div id="toggle-dark-mode-container">
-    <button id="toggle-dark-mode">
-        <span id="light-icon"><img src="images/soleil.png" alt="Soleil" title="Activer le mode clair"></span>
-        <span id="dark-icon"><img src="images/lune.png" alt="Lune" title="Activer le mode sombre"></span>
-    </button>
-</div>
+
 
 </body>
 
@@ -99,7 +94,7 @@
         if (isDarkMode) {
             darkIcon.style.display = 'none';
             lightIcon.style.display = 'inline-block';
-        } else {
+        } else  {
             darkIcon.style.display = 'inline-block';
             lightIcon.style.display = 'none';
         }
@@ -127,9 +122,10 @@
         body.classList.add('dark-mode');
         darkIcon.style.display = 'none';
         lightIcon.style.display = 'inline-block';
-        backgroundContainer.style.display = 'block';
+        
     } else {
         body.classList.remove('dark-mode');
+        lightIcon.style.display = 'none';
         const container = document.getElementById('toggle-dark-mode-container');
         container.classList.add('light-mode');
     }
