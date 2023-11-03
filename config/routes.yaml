@@ -6,29 +6,30 @@ controllers:
 
 
 
-toggle_dark_mode:
-    path: '/toggle-dark-mode'
+toggle_dark_mode_home:
+    path: '/toggle-dark-mode/home'
     controller: 'App\Controller\HomeController::toggleDarkMode'
-    
     methods: ['POST']
 
-
 toggle_dark_mode_formation:
-    path: '/toggle-dark-mode'
+    path: '/toggle-dark-mode/formation'
     controller: 'App\Controller\FormationController::toggleDarkMode'
     methods: ['POST']
 
-
 app_toggle_dark_mode_experience:
-    path: '/toggle-dark-mode'
+    path: '/toggle-dark-mode/experience'
     controller: 'App\Controller\ExperienceController::toggleDarkMode'
     methods: ['POST']
 
-
-
 app_toggle_dark_mode_competence:
-    path: '/toggle-dark-mode'
+    path: '/toggle-dark-mode/competence'
     controller: 'App\Controller\CompetenceController::toggleDarkMode'
     methods: ['POST']
+
+app_toggle_dark_mode_centresdinterets:
+    path: '/toggle-dark-mode/centresdinterets'
+    controller: 'App\Controller\CentresdinteretsController::toggleDarkMode'
+    methods: ['POST']
+    
 
     

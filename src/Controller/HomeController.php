@@ -17,6 +17,9 @@ class HomeController extends AbstractController
         // Récupère la valeur actuelle du mode sombre depuis la session
         $isDarkMode = $request->getSession()->get('isDarkMode', false);
 
+        // Débogage : Affiche la valeur de $isDarkMode dans la console
+        dump($isDarkMode);
+
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
             'isDarkMode' => $isDarkMode,
@@ -24,20 +27,24 @@ class HomeController extends AbstractController
     }
 
     public function toggleDarkMode(Request $request): JsonResponse
-    {
-        $isDarkMode = $request->request->get('isDarkMode', false);
+{
+    $isDarkMode = $request->request->get('isDarkMode', false);
 
-        // Stocke la préférence dans la session
-        $request->getSession()->set('isDarkMode', $isDarkMode);
+    // Stocke la préférence dans la session
+    $request->getSession()->set('isDarkMode', $isDarkMode);
 
-        // Créer le cookie avec la date d'expiration
-        $cookie = new Cookie('darkMode', $isDarkMode ? '1' : '0', time() + 2592000); // 30 jours en secondes
+    // Force la sauvegarde de la session
+    $request->getSession()->save();
 
-        // Ajoute le cookie à la réponse
-        $response = new JsonResponse(['success' => true]);
-        $response->headers->setCookie($cookie);
+    // Créer le cookie avec la date d'expiration
+    $cookie = new Cookie('darkMode', $isDarkMode ? '1' : '0', time() + 2592000); // 30 jours en secondes
 
-        return $response;
-    }
+    // Ajoute le cookie à la réponse
+    $response = new JsonResponse(['success' => true]);
+    $response->headers->setCookie($cookie);
+
+    return $response;
+}
+
 }
 

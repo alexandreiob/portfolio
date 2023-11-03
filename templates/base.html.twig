@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v=<?= filemtime('public/css/styles.css') ?>" />
         <link rel="icon" href="{{ asset('images/lettre-a.png') }}" type="image/x-icon">
 
        
@@ -75,75 +75,16 @@
 
 {% block body %}{% endblock %}
 
-<script>
-    // Fonction pour basculer le mode sombre
-    function toggleDarkMode() {
-        const isDarkMode = document.body.classList.toggle('dark-mode');
-        const darkIcon = document.getElementById('dark-icon');
-        const lightIcon = document.getElementById('light-icon');
-        const backgroundContainer = document.querySelector('.background-container');
 
-        // Change la couleur de fond en fonction du mode sombre
-        const container = document.getElementById('toggle-dark-mode-container');
-        container.classList.toggle('dark-mode', isDarkMode);
-        darkIcon.classList.toggle('dark-mode', isDarkMode);
-        lightIcon.classList.toggle('dark-mode', isDarkMode);
-        backgroundContainer.classList.toggle('dark-mode', isDarkMode);
+<!-- ORDRE DES INCLUSIONS DE FICHIERS JS TRES IMPORTANT !!! -->
 
-        // Change l'icône en fonction du mode sombre
-        if (isDarkMode) {
-            darkIcon.style.display = 'none';
-            lightIcon.style.display = 'inline-block';
-        } else  {
-            darkIcon.style.display = 'inline-block';
-            lightIcon.style.display = 'none';
-        }
+<!-- Inclure d'abord le script qui contient getCookie -->
+<script src="{{ asset('js/getCookie.js') }}"></script>
 
-        // Enregistre l'état du mode sombre dans un cookie
-        const cookieValue = isDarkMode ? "1" : "0";
-        document.cookie = "darkMode=" + encodeURIComponent(cookieValue);
+<script>const isDarkMode = {{ isDarkMode ? 'true' : 'false' }} || (getCookie('darkMode') === '1') || false;</script>
 
-        // Débogage : Affiche la valeur du cookie dans la console
-        console.log("darkMode cookie value:", cookieValue);
-    }
-
-    // Ajoute un écouteur d'événements au bouton
-    const toggleButton = document.getElementById('toggle-dark-mode');
-    toggleButton.addEventListener('click', toggleDarkMode);
-
-    // Applique initialement le mode sombre si c'est activé
-    const isDarkModeInitially = {{ isDarkMode ? 'true' : 'false' }} || (getCookie('darkMode') === '1') || false;
-    const body = document.body;
-    const lightIcon = document.getElementById('light-icon');
-    const darkIcon = document.getElementById('dark-icon');
-    const backgroundContainer = document.querySelector('.background-container');
-
-    if (isDarkModeInitially) {
-        body.classList.add('dark-mode');
-        darkIcon.style.display = 'none';
-        lightIcon.style.display = 'inline-block';
-        
-    } else {
-        body.classList.remove('dark-mode');
-        lightIcon.style.display = 'none';
-        const container = document.getElementById('toggle-dark-mode-container');
-        container.classList.add('light-mode');
-    }
-
-    // Applique la taille de 90px aux icônes
-    const iconElements = document.querySelectorAll('#dark-icon img, #light-icon img');
-    iconElements.forEach(function(icon) {
-        icon.style.width = '90px';
-        icon.style.height = '90px';
-    });
-
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
-</script>
-
+<!-- Ensuite, inclure le script principal -->
+<script src="{{ asset('js/script.js') }}"></script>
 
 
 
