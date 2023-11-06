@@ -16,13 +16,12 @@ class CentresdinteretsController extends AbstractController
         // Récupère la valeur actuelle du mode sombre depuis la session
     $isDarkMode = $request->getSession()->get('isDarkMode', false);
 
-    // Récupère le chemin de la route toggleDarkMode
-    $toggleDarkModeRoute = $this->generateUrl('toggle_dark_mode');
+   // Récupère la valeur actuelle du mode sombre depuis la session
+   $isDarkMode = $request->getSession()->get('isDarkMode', false);
 
         return $this->render('centresdinterets/index.html.twig', [
             'controller_name' => 'CentresdinteretsController',
             'isDarkMode' => $isDarkMode,
-        'toggleDarkModeRoute' => $toggleDarkModeRoute,
     ]);
 }
 

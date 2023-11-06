@@ -1,5 +1,3 @@
-/* public/css/styles.css */
-
 body, html {
     height: 100%;
     margin: 0;
@@ -27,15 +25,11 @@ body, html {
     .centered-section h2 {
         color: #ffffff;
     }   
-   
-
-    
-      
     .circle-title {
-        background-color: rgb(218, 16, 16);
+        background-color: #ffffff;
     }  
     .circle:hover .circle-title {
-        background-color: #575858; /* Couleur de fond grise au survol */
+        background-color: rgb(51, 204, 204);
     }
     .fondpage {
         background-color: #000000;
@@ -46,7 +40,10 @@ body, html {
     .boutonhome {
         filter: invert(100%);  
     }
+    
 }
+
+
 
 .centered-section {
     text-align: center; /* Centre le texte horizontalement */

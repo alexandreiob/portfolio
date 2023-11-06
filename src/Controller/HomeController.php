@@ -18,7 +18,7 @@ class HomeController extends AbstractController
         $isDarkMode = $request->getSession()->get('isDarkMode', false);
 
         // Débogage : Affiche la valeur de $isDarkMode dans la console
-        dump($isDarkMode);
+        //dump($isDarkMode);
 
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',

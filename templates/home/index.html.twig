@@ -8,8 +8,8 @@
 {% block body %}
         <div id="toggle-dark-mode-container">
             <button id="toggle-dark-mode">
-                <span id="light-icon"><img src="images/soleil.png" alt="Soleil" title="Activer le mode clair"></span>
-                <span id="dark-icon"><img src="images/lune.png" alt="Lune" title="Activer le mode sombre"></span>
+                <span id="light-icon"><img src="images/jour.png" alt="Soleil" title="Activer le mode clair"></span>
+                <span id="dark-icon"><img src="images/nuit.png" alt="Lune" title="Activer le mode sombre"></span>
             </button>
         </div>
 
@@ -30,7 +30,7 @@
     <div class="circle">
         <a href="{{ path('app_experience') }}">
             {% if isDarkMode %}
-                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Expérience sombre" class="circle-icon">
+                <img src="{{ asset('images/experience_sombre.gif') }}?mode=sombre" alt="Expérience sombre" class="circle-icon">
             {% else %}
                 <img src="{{ asset('images/experience_clair.gif') }}?mode=clair" alt="Expérience clair" class="circle-icon">
             {% endif %}
@@ -44,7 +44,7 @@
     <div class="circle">
         <a href="{{ path('app_competence') }}">
             {% if isDarkMode %}
-                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Compétences sombre" class="circle-icon">
+                <img src="{{ asset('images/competences_sombre.gif') }}?mode=sombre" alt="Compétences sombre" class="circle-icon">
             {% else %}
                 <img src="{{ asset('images/competences_clair.gif') }}?mode=clair" alt="Compétences clair" class="circle-icon">
             {% endif %}
@@ -58,7 +58,7 @@
     <div class="circle">
         <a href="{{ path('app_formation') }}">
             {% if isDarkMode %}
-                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Formation sombre" class="circle-icon">
+                <img src="{{ asset('images/formation_sombre.gif') }}?mode=sombre" alt="Formation sombre" class="circle-icon">
             {% else %}
                 <img src="{{ asset('images/formation_clair.gif') }}?mode=clair" alt="Formation clair" class="circle-icon">
             {% endif %}
@@ -72,7 +72,7 @@
     <div class="circle">
         <a href="{{ path('app_centresdinterets') }}">
             {% if isDarkMode %}
-                <img src="{{ asset('images/lettre-a.png') }}?mode=sombre" alt="Centres d'intérêts sombre" class="circle-icon">
+                <img src="{{ asset('images/centresdinterets_sombre.gif') }}?mode=sombre" alt="Centres d'intérêts sombre" class="circle-icon">
             {% else %}
                 <img src="{{ asset('images/centresdinterets_clair.gif') }}?mode=clair" alt="Centres d'intérêts clair" class="circle-icon">
             {% endif %}

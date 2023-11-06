@@ -77,6 +77,6 @@ if (isDarkMode) {
 // Applique la taille de 90px aux icônes
 const iconElements = document.querySelectorAll('#dark-icon img, #light-icon img');
 iconElements.forEach(function (icon) {
-    icon.style.width = '90px';
-    icon.style.height = '90px';
+    icon.style.width = '60px';
+    icon.style.height = '60px';
 });
