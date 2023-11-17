@@ -1,8 +1,12 @@
+ /* Styles pour les très grands écrans */
+
+
 body, html {
     height: 100%;
     margin: 0;
     background-color: #ffffff;
 }
+
 
 .dark-mode {
     background-color: #000000; /* Fond noir en mode sombre */
@@ -39,9 +43,9 @@ body, html {
     }  
     .boutonhome {
         filter: invert(100%);  
-    }
-    
+    }   
 }
+
 
 
 
@@ -52,49 +56,44 @@ body, html {
     align-items: center; /* Centre les éléments verticalement */
     justify-content: center; /* Centre les éléments horizontalement */
     background-color: #f2f2f2; /* Couleur de fond gris clair */
-    padding: 20px; /* Espace autour des informations */
+    padding: 1.25rem; /* Espace autour des informations */
 }
 
 .centered-section img {
-    width: 200px;
-    height: 200px;
+    width: 12.5rem;
+    height: 12.5rem;
     border-radius: 50%;
     object-fit: cover;
-    margin-top: 30px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
-    border: 5px solid rgb(51, 204, 204); /* Ajoute un filet avec la couleur RVB */
+    margin-top: 1.875rem;
+    box-shadow: 0.188rem 0.188rem 0.313rem rgba(0, 0, 0, 0.3); /* Ajoute une ombre légère */
+    border: 0.313rem solid rgb(51, 204, 204); /* Ajoute un filet avec la couleur RVB */
 }
 
-
-
 .centered-section h1 {
-font-family: Arial, Helvetica, sans-serif;
-font-size:25px;
-font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.563rem;
+    font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 }  
-
 
 .centered-section h2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size:30px;
+    font-size: 1.875rem;
     text-transform: uppercase; /* Convertit le texte en majuscules */
     color: rgb(0, 0, 0);
-    
 }  
 
 .special {
     color: rgb(51, 204, 204); /* Couleur spéciale (RVB 51, 204, 204) pour "Web" et "Web Mobile" */
 }
 
-
-
 .centered-section .presentation-text {
-    width: 500px; /* Largeur de 500px */
-    border: 2px solid rgb(51, 204, 204); 
-    border-radius: 10px; /* Bords arrondis de 10px */
-    padding: 10px; /* Marge intérieure de 10px */
+    width: 31.25rem; /* Largeur de 500px */
+    border: 0.125rem solid rgb(51, 204, 204); 
+    border-radius: 0.625rem; /* Bords arrondis de 10px */
+    padding: 0.625rem; /* Marge intérieure de 10px */
     font-family: Arial, Helvetica, sans-serif;
 }
+
 
 
 
@@ -104,7 +103,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 .circle-section {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 
 .circle {
@@ -130,13 +129,12 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     left: 0;
     right: 0;
     background-color: transparent; /* Couleur de fond transparente par défaut */
-    border-radius: 10px; /* Bords arrondis */
-    padding: 8px 10px; /* Espace intérieur */
+    border-radius: 0.625rem; /* Bords arrondis */
+    padding: 0.5rem 0.625rem; /* Espace intérieur */
     opacity: 1; /* Afficher le titre dès le chargement de la page */
     transition: background-color 0.3s ease; /* Animation de couleur de fond */
     z-index: 1; /* Empilez le fond en dessous du lien */
-    margin-bottom: 10px;
-    
+    margin-bottom: 0.625rem;
 }
 
 .circle:hover .circle-title {
@@ -146,17 +144,15 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 /* Styles pour l'icône animé */
 .circle-icon {
-    width: 150px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
 }
-
-
 
 /* ... SECTION BLOCS PROJETS ... */
 
 .projects-container {
     background-color: #f2f2f2;
-    height: 550px;
+    height: 34.375rem;
 }
 
 .projects-section {
@@ -164,17 +160,17 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1700px;
+    max-width: 106.25rem;
 }
 
 .project {
     position: relative;
-    width: 500px;
-    height: 325px;
+    width: 31.25rem;
+    height: 20.313rem;
     background-color: #fff;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    border: 5px solid rgb(51, 204, 204);
-    border-radius: 10px;
+    box-shadow: 0.188rem 0.188rem 0.313rem rgba(0, 0, 0, 0.3);
+    border: 0.313rem solid rgb(51, 204, 204);
+    border-radius: 0.625rem;
     overflow: hidden;
     display: flex;
     align-items: center; /* Centrer verticalement */
@@ -184,7 +180,7 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 .project img {
     width: 110%;
     height: 110%;
-    object-fit: contain
+    object-fit: contain;
 }
 
 .project a {
@@ -207,88 +203,77 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     transition: opacity 0.3s ease; /* Animation de transition */
 }
 
-
 .project:hover .overlay {
     opacity: 1;
 }
 
 .overlay p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 0.313rem;
     color: rgb(255, 255, 255);
     font-size: x-large;
     text-transform: uppercase;
-    margin-bottom: 10px; /* Ajout d'une marge en bas */
+    margin-bottom: 0.625rem; /* Ajout d'une marge en bas */
 }
-
-
 
 /* ... SECTION BLOCS INFOS DES PROJETS ... */
 
-
 .project-info {
-    width: 500px;
+    width: 31.25rem;
     display: flex;
     flex-direction: column; /* Affiche les informations en colonne */
     align-items: center; /* Centrer horizontalement les informations */
     text-align: center; /* Centrer horizontalement le texte */
 }
 
-
 .infos-container {
     display: flex;
     justify-content: space-between; /* Espacement uniforme entre les projets */
     margin: 0 auto; /* Marge gauche et droite automatique pour centrer */
-    max-width: 1700px; /* Largeur maximale de la section */
+    max-width: 106.25rem; /* Largeur maximale de la section */
 }
-
 
 .project-info h3 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size:25px;
+    font-size: 1.563rem;
     font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     margin-bottom: 0;
-    }  
+}  
 
 .project-info p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-        }  
+}
 
+/* Styles CSS pour afficher les icônes en ligne (horizontalement) */
+.project-icons {
+    display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
+    align-items: center; /* Centrer verticalement les icônes */
+    margin-top: 0.625rem;
+    position: relative; /* Position relative pour positionner la ligne blanche */
+}
 
+.project-icons img {
+    width: 3.125rem; /* Ajustez la largeur souhaitée */
+    height: auto; /* Garde la proportion d'origine */
+    margin-right: 0.313rem;
+}
 
-    /* Styles CSS pour afficher les icônes en ligne (horizontalement) */
-    .project-icons {
-        display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
-        align-items: center; /* Centrer verticalement les icônes */
-        margin-top: 10px;
-        position: relative; /* Position relative pour positionner la ligne blanche */
-    }
-    
+.divider {
+    position: absolute;
+    bottom: 30%; /* Alignez la ligne blanche en bas de la ligne d'icônes */
+    left: 50%; /* Alignez-la au centre horizontalement */
+    transform: translateX(-50%);
+    width: 90%; /* Ajustez la largeur de la ligne blanche */
+    height: 3.75rem; /* Ajustez l'épaisseur de la ligne blanche */
+    background-color: #fff; /* Couleur de la ligne blanche */
+    border-radius: 1.875rem; /* Bords arrondis pour correspondre au fond de l'overlay */
+}
 
-    .project-icons img {
-        width: 50px; /* Ajustez la largeur souhaitée */
-        height: auto; /* Garde la proportion d'origine */
-        margin-right: 5px;
-    }
-
- 
-
-    .divider {
-        position: absolute;
-        bottom: 30%; /* Alignez la ligne blanche en bas de la ligne d'icônes */
-        left: 50%; /* Alignez-la au centre horizontalement */
-        transform: translateX(-50%);
-        width: 90%; /* Ajustez la largeur de la ligne blanche */
-        height: 60px; /* Ajustez l'épaisseur de la ligne blanche */
-        background-color: #fff; /* Couleur de la ligne blanche */
-        border-radius: 30px; /* Bords arrondis pour correspondre au fond de l'overlay */
-    }
 
 
 
 /* ... SECTION CONTACTS ... */
-
 
 .centered-section-contact {
     text-align: center; /* Centre le texte horizontalement */
@@ -297,34 +282,27 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     align-items: center; /* Centre les éléments verticalement */
     justify-content: center; /* Centre les éléments horizontalement */
     background-color: #ffffff;
-    margin-top: 30px;
-
+    margin-top: 1.875rem;
 }
 
 .centered-section-contact h2 {
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: x-large;
-   text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    text-transform: uppercase;
 }
-
-
-
-
-
 
 .contact-container {
     display: flex;
-    justify-content:center; /* Espacement égal entre les éléments */
+    justify-content: center; /* Espacement égal entre les éléments */
     align-items: center;
     background-color: #ffffff;
-    margin-bottom: 30px;
-    margin-top: 0px;
+    margin-bottom: 1.875rem;
+    margin-top: 0;
 }
 
 .contact-info {
-    
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     font-weight: bold;
@@ -332,22 +310,21 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 .contact-info p {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     background-color: rgb(51, 204, 204);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.313rem;
 }
 
 .contact-button a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     background-color: rgb(51, 204, 204);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.313rem;
 }
-
 
 /* public/css/experience.css */
 
@@ -361,40 +338,38 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 }
 
 .experience-content {
-    max-width: 800px;
-    margin: 50px auto 50px; /* Ajoute une marge de 50px en haut */
+    max-width: 50rem;
+    margin: 3.125rem auto 3.125rem; /* Ajoute une marge de 50px en haut */
     text-align: left;
-    font-family:Arial, Helvetica, sans-serif;
-    border: 5px solid rgb(51, 204, 204); 
-    border-radius: 10px; /* Bords arrondis de 10px */
-    padding: 50px; /* Marge intérieure de 10px */
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0.313rem solid rgb(51, 204, 204); 
+    border-radius: 0.625rem; /* Bords arrondis de 10px */
+    padding: 3.125rem; /* Marge intérieure de 10px */
     background-color: #ffffff;
     position: relative;
-
 }
 
 .experience-content h1 {
-    margin-top: -20px;
+    margin-top: -1.25rem;
 }
 
 .experience-content h2 {
     color: rgb(51, 204, 204);
-    margin-bottom: 15px;
-    margin-top: 50px;
+    margin-bottom: 0.938rem;
+    margin-top: 3.125rem;
 }
 
 .experience-content p {
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
-
 .secondparagraphe {
-    margin-top: 20px; /* ajuste la valeur selon l'espace souhaité */
+    margin-top: 1.25rem; /* ajuste la valeur selon l'espace souhaité */
 }
 
 .secondparagraphe p {
     list-style: none; /* Désactive la puce par défaut */
-    padding-left: 20px; /* Ajoute un espace pour la puce */
+    padding-left: 1.25rem; /* Ajoute un espace pour la puce */
     position: relative;
 }
 
@@ -406,25 +381,17 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    margin-right: 5px; /* Ajoute un espace entre la puce et le texte */
+    margin-right: 0.313rem; /* Ajoute un espace entre la puce et le texte */
 }
-
-
-
-
-
-
-
 
 /* BOUTON HOME */
 
 .boutonhome {
-    width: 50px;
-    height: 50px;
+    width: 3.125rem;
+    height: 3.125rem;
     position: absolute;
-    top: 20px; /* Vous pouvez ajuster cette valeur pour positionner verticalement */
-    right: 20px; /* Pour aligner à droite */
-    
+    top: 1.25rem; /* Vous pouvez ajuster cette valeur pour positionner verticalement */
+    right: 1.25rem; /* Pour aligner à droite */
 }
 
 
@@ -432,3 +399,147 @@ font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
 
 
 
+@media only screen and (min-width: 1122px) and (max-width: 1749px) {
+    /* Styles pour les écrans de taille moyens/grands */
+
+
+/* ... SECTION BLOCS PROJETS ... */
+
+.projects-container {
+    background-color: #f2f2f2;
+    height: 34.375rem;
+}
+
+.projects-section {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 106.25rem;
+}
+
+.project {
+    position: relative;
+    width: 31.25rem;
+    height: 20.313rem;
+    background-color: #fff;
+    box-shadow: 0.188rem 0.188rem 0.313rem rgba(0, 0, 0, 0.3);
+    border: 0.313rem solid rgb(51, 204, 204);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.project img {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+}
+
+.project a {
+    text-decoration: none; /* Désactive le soulignement */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer horizontalement les éléments de l'overlay */
+    justify-content: center; /* Centrer verticalement les éléments de l'overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Animation de transition */
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.313rem;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-bottom: 0.625rem; /* Ajout d'une marge en bas */
+}
+
+/* ... SECTION BLOCS INFOS DES PROJETS ... */
+
+.project-info {
+    width: 31.25rem;
+    display: flex;
+    flex-direction: column; /* Affiche les informations en colonne */
+    align-items: center; /* Centrer horizontalement les informations */
+    text-align: center; /* Centrer horizontalement le texte */
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.infos-container {
+    display: flex;
+    justify-content: space-between; /* Espacement uniforme entre les projets */
+    margin: 0 auto; /* Marge gauche et droite automatique pour centrer */
+    max-width: 106.25rem; /* Largeur maximale de la section */
+}
+
+.project-info h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.563rem;
+    font-weight: bold; /* Met en gras le texte du titre, si nécessaire */
+    margin-bottom: 0;
+}  
+
+.project-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+/* Styles CSS pour afficher les icônes en ligne (horizontalement) */
+.project-icons {
+    display: flex; /* Utilisez Flexbox pour aligner les icônes en ligne */
+    align-items: center; /* Centrer verticalement les icônes */
+    margin-top: 0.625rem;
+    position: relative; /* Position relative pour positionner la ligne blanche */
+}
+
+.project-icons img {
+    width: 3.125rem; /* Ajustez la largeur souhaitée */
+    height: auto; /* Garde la proportion d'origine */
+    margin-right: 0.313rem;
+}
+
+.divider {
+    position: absolute;
+    bottom: 30%; /* Alignez la ligne blanche en bas de la ligne d'icônes */
+    left: 50%; /* Alignez-la au centre horizontalement */
+    transform: translateX(-50%);
+    width: 90%; /* Ajustez la largeur de la ligne blanche */
+    height: 3.75rem; /* Ajustez l'épaisseur de la ligne blanche */
+    background-color: #fff; /* Couleur de la ligne blanche */
+    border-radius: 1.875rem; /* Bords arrondis pour correspondre au fond de l'overlay */
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 601px) and (max-width: 1121px) {
+    /* Styles pour les tablettes */
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* Styles pour les smartphones */
+  }
+  
