@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="{{ asset('css/photo.css') }}?v=<?= filemtime('public/css/styles.css') ?>" />
+
+ <div class="photo-gallery">
+        <figure>
+            <img src="{{ asset('images/vg1.png') }}" alt="home page 1">
+            <figcaption>Home page dynamique : à chaque refresh le fond d'écran change</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/vg2.png') }}" alt="home page 2">
+            <figcaption>Fond d'écran alternatif</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/vg3.png') }}" alt="home page 3">
+            <figcaption>Fond d'écran alternatif</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/vg5.png') }}" alt="page jeux vidéos">
+            <figcaption>Page répertoriant l'ensemble des jeux vidéos</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/vg6.png') }}" alt="formulaire d'ajout">
+            <figcaption>Formulaire d'ajout d'un jeu vidéo</figcaption>
+        </figure>
+
+        <figure>
+            <img src="{{ asset('images/vg7.png') }}" alt="page consoles">
+            <figcaption>Page répertoriant l'ensemble des consoles de jeux</figcaption>
+        </figure>
+
+        <!-- Ajoutez autant de figures que nécessaire avec des légendes différentes -->
+    </div>
+
+<div id="image-overlay" class="overlay" style="display: none;">
+        <img id="enlarged-image" src="" alt="Enlarged Photo">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.photo-gallery img');
+            const overlay = document.getElementById('image-overlay');
+            const enlargedImage = document.getElementById('enlarged-image');
+
+            images.forEach(image => {
+                image.addEventListener('click', function () {
+                    overlay.style.display = 'block';
+                    enlargedImage.src = this.src;
+                });
+            });
+
+            overlay.addEventListener('click', function () {
+                this.style.display = 'none';
+            });
+        });
+    </script>

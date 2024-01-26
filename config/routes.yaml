@@ -31,5 +31,13 @@ app_toggle_dark_mode_centresdinterets:
     controller: 'App\Controller\CentresdinteretsController::toggleDarkMode'
     methods: ['POST']
     
+project_detail:
+    path: '/projects/{id}'
+    controller: 'App\Controller\ProjectsController::afficherProjet'
+
+project_photos:
+    path: '/projects/{id}/photos'
+    controller: 'App\Controller\ProjectsController::afficherPhotosProjet'
+
 
     

@@ -1,4 +1,4 @@
- /* Styles pour les très grands écrans */
+/* Styles pour les très grands écrans */
 
 
 body, html {
@@ -215,6 +215,7 @@ body, html {
     text-transform: uppercase;
     margin-bottom: 0.625rem; /* Ajout d'une marge en bas */
 }
+
 
 /* ... SECTION BLOCS INFOS DES PROJETS ... */
 
@@ -570,6 +571,3 @@ body, html {
 
 }
 
-
-
-  
